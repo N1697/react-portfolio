@@ -1,0 +1,238 @@
+/*====================STYLE 1====================*/
+/* .services__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4.8rem;
+}
+
+.service__card {
+  background: var(--color-bg-variant);
+  border-radius: 0 0 3.2rem 3.2rem;
+  border: 1px solid var(--color-primary);
+  height: fit-content;
+  transition: var(--transition);
+}
+
+.service__card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.service__header {
+  background: var(--color-primary);
+  padding: 3.2rem;
+  border-radius: 0 0 3.2rem 3.2rem;
+  box-shadow: 0 3.2rem 1.6rem rgba(0, 0, 0, 0.2);
+}
+
+.service__header h3 {
+  color: var(--color-bg);
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.service__list {
+  padding: 3.2rem;
+}
+
+.service__list li {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.service__list-icon {
+  color: var(--color-primary);
+}
+
+.service__list p {
+  font-size: 1.6rem;
+} */
+
+/*----------MEDIA QUERIES (MEDIUM DEVICES)----------*/
+/* @media screen and (max-width: 1024px) {
+  .services__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+  }
+
+  .service__card {
+    height: auto;
+  }
+} */
+
+/*----------MEDIA QUERIES (SMALL DEVICES)----------*/
+/* @media screen and (max-width: 600px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+} */
+
+/*====================STYLE 2====================*/
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4.8rem;
+  justify-content: center;
+}
+
+.service__card {
+  position: relative;
+  border: 1px solid transparent;
+  background: var(--color-bg-variant);
+  /* border-radius: 0 0 3.2rem 3.2rem; */
+  padding: 9.6rem 0 3.2rem 4rem;
+  height: fit-content;
+  transition: var(--transition);
+}
+
+.service__card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.services__card--icon {
+  display: block;
+  color: var(--color-primary);
+  font-size: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.services__card--title {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1.6rem;
+}
+
+.services__card--button {
+  font-size: small;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.services__card--button .services__card--arrow-btn {
+  font-size: 1.6rem;
+  transition: var(--transition);
+}
+
+.services__card--button:hover .services__card--arrow-btn {
+  transform: translateX(0.4em);
+}
+
+.services__card--modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 20; /*overlay .nav*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.6rem;
+  opacity: 0; /*hide modal*/
+  visibility: hidden; /*hide modal*/
+  transition: var(--transition);
+}
+
+.services__modal-content {
+  width: 50rem;
+  position: relative;
+  background: var(--color-bg-variant);
+  padding: 7.2rem 4rem 4rem;
+  border-radius: 3.2rem;
+  z-index: 20;
+}
+
+.services__modal--close-btn {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+  color: var(--color-primary);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.services__modal-title,
+.services__modal-description {
+  text-align: center;
+}
+
+.services__modal-title {
+  font-weight: 800;
+  margin-bottom: 1.6rem;
+}
+
+.services__modal-description {
+  font-size: small;
+  padding: 0 5rem;
+  margin-bottom: 4rem;
+}
+
+.services__modal-services {
+  row-gap: 1.2rem;
+}
+
+.services__modal-service {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+}
+
+.services__modal-icon {
+  color: var(--color-primary);
+}
+
+.services__modal-info {
+  font-size: 1.6rem;
+}
+
+/*Active Modal*/
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*----------MEDIA QUERIES (MEDIUM DEVICES)----------*/
+@media screen and (max-width: 1024px) {
+  .services__container {
+    gap: 3.2rem;
+  }
+
+  .service__card {
+    padding: 5rem 0.8rem 2rem 2rem;
+  }
+
+  .services__card--icon {
+    font-size: 2.4rem;
+  }
+}
+
+/*----------MEDIA QUERIES (SMALL DEVICES)----------*/
+@media screen and (max-width: 600px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .services__modal-content {
+    padding: 7.2rem 2.4rem 4rem;
+  }
+
+  .services__modal-services p {
+    font-size: 1.5rem;
+  }
+
+  .services__modal-description {
+    padding: 0;
+    margin-bottom: 1.6rem;
+  }
+}
