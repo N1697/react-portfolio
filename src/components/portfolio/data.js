@@ -1,3 +1,4 @@
+import Restaurant from "../../assets/images/restaurant.png";
 import Tenzies from "../../assets/images/tenzies.png";
 import MovieCentre from "../../assets/images/movie-centre.png";
 import DigitalBusinessCard from "../../assets/images/digital-business-card.png";
@@ -9,6 +10,13 @@ import Pong from "../../assets/images/pong.png";
 import Snake from "../../assets/images/snake.png";
 
 export default [
+  {
+    id: 0,
+    image: Restaurant,
+    title: "Bien Nho 2 - Restaurant (React JS)",
+    github: "https://github.com/N1697/restaurant-website",
+    demo: "https://neon-peony-a899b2.netlify.app/",
+  },
   {
     id: 1,
     image: Tenzies,
